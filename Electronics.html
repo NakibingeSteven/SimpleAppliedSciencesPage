@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .currentPage {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        ul ul {
+            margin-left: 20px;
+        }
+
+        ul ul ul {
+            margin-left: 40px;
+        }
+
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+            padding: 10px 0;
+            position: sticky;
+            top: 10px;
+            /* Adjust this value as needed to maintain spacing */
+            z-index: 100;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            padding: 8px 8px;
+            margin: 0 10px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            background-color: #fff;
+            color: #333;
+        }
+
+
+        section {
+            padding: 13px 0px 0;
+            /* Add extra padding to the top */
+            text-align: center;
+        }
+
+        /* Add more styling here as needed */
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            /* Adjust the gap between cards */
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: calc(33.33% - 20px);
+            /* 3 cards per row; adjust as needed */
+            max-width: 300px;
+            /* Limit the card width */
+            transition: transform 0.2s;
+            /* Add a smooth hover effect */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            /* Lift the card slightly on hover */
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            /* Add spacing between image and button */
+        }
+
+        .download-button-container {
+            text-align: center;
+            margin-top: 10px;
+            /* Add spacing between button and card content */
+        }
+
+        .download-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            /* Add a smooth hover effect */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+        }
+
+        /* Style for the "Download Documents" button */
+        .documents-button {
+            background-color: #28a745;
+            /* Green color for documents button */
+            margin-left: 4px;
+            /* Add spacing between the two buttons */
+        }
+
+        .documents-button:hover {
+            background-color: #1e7e34;
+            /* Darker green on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="index.html">Introducution</a>
+        <a href="Electronics.html" class="currentPage">Electronics</a>
+        <a href="Wireless.html">Wireless/IOT</a>
+        <a href="Mechanics.html">Mechanics</a>
+        <a href="Robotics.html">Robotics</a>
+        <a href="Form Factors.html">Form Factors</a>
+    </div>
+    <div class="main">
+        <nav>
+            <a href="#section1" id="nav-link-1">SENSORS</a>
+            <a href="#section2" id="nav-link-2">DISPLAYS</a>
+            <a href="#section3" id="nav-link-3">MODULES</a>
+        </nav>
+
+        <section id="section1">
+            <h2>SENSORS</h2>
+            <div class="card-container">
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="electronics/ultrasonic sensor/HC-SR04-Ultrasonic-Sensor.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>HC-SR04 Ultrasonic Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="electronics/pir sensor/Passive-Infrared (PIR-Sensor).png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p> HC-SR501 PIR Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/DHT11/DHT11-Temperature-Humidity-Sensor.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>DHT11 Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                  <!-- Card 2 -->
+                  <div class="card">
+                    <img src="electronics/DHT22/DHT22-Temperature-Humidity-Sensor.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>DHT22 Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/LM35/LM35-Temperature-Sensor.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>LM35 Temperature Sensor </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/MQ2/MQ2-Gas-Sensor-Module.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>MQ2 Gas/Smoke Sensor </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/DS18B20/DS18B20-Pinout Temperature-Sensor.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>DS18B20 1-Wire Digital Temperature Sensor </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/Watet Level Sensor/Water-Level-Sensor-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Water Level Sensor </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/flex sensor/Types-of-Flex-Sensors.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Flex Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/pulse sensor/Pulse-Sensor-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Pulse Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/rfid/RC522-RFID-Reader-Writer-Module-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>RFID(RC522 RFID Module)</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/mpu6050/MPU6050-3-axis-Accelerometer-Gyroscope-Module-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p> MPU6050 Accelerometer and Gyroscope Sensor</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/adxl335/ADXL335-Accelerometer-Module-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>ADXL335 Accelerometer</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+        <section id="section2">
+            <h2>DISPLAYS</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="electronics/16x2 lcd/16x2-Character-LCD-Display-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>16×2 Character LCD Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/i2c lcd/I2C-LCD-Display-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>I2C LCD</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/7segment display/7-Segment-Common-Anode-Common-Cathode-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Seven Segment Display </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/oled display/128x64-Blue-I2C-OLED-Display.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>OLED Graphic Display Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="electronics/TM1637 7segment display/TM1637-4-Digit-7-Segment-Display-Module-Pinout.png" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>TM1637 4-Digit 7-Segment Display</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+
+
+
+        <section id="section3">
+            <h2>MODULES</h2>
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>DS1307 RTC Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>One Channel Relay Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Two Channel Relay Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>4×3 & 4×4 Membrane Keypad</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Rotary Encoder </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>Micro SD Card Module</p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <img src="your_image_url_1.jpg" alt="Card Image 1">
+                    <!-- Card content for Card 1 -->
+                    <div class="download-button-container">
+                        <p>2-Axis Joystick Works </p>
+                    </div>
+                    <div class="download-button-container">
+                        <a class="download-button documents-button" href="#">Doc</a>
+                        <a class="download-button documents-button" href="#">Code</a>
+                        <a class="download-button" href="#">Parts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+    </div>
+
+    <script>
+        // Function to scroll to the middle of a section
+        function scrollToSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section) {
+                var windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                var sectionHeight = section.clientHeight;
+                var scrollTo = section.offsetTop - (windowHeight - sectionHeight) / 2;
+                window.scrollTo({
+                    top: scrollTo,
+                    behavior: "smooth" // This makes the scroll smooth
+                });
+            }
+        }
+
+        // Function to attach click event listeners to the navigation links
+        function attachScrollToNavLink(linkId, sectionId) {
+            var navLink = document.getElementById(linkId);
+            if (navLink) {
+                navLink.addEventListener("click", function (event) {
+                    event.preventDefault(); // Prevent default link behavior
+                    scrollToSection(sectionId);
+                });
+            }
+        }
+
+        // Call the function for each navigation link and its corresponding section
+        attachScrollToNavLink("nav-link-1", "section1");
+        attachScrollToNavLink("nav-link-2", "section2");
+        attachScrollToNavLink("nav-link-3", "section3");
+        attachScrollToNavLink("nav-link-4", "section4");
+        attachScrollToNavLink("nav-link-5", "section5");
+        attachScrollToNavLink("nav-link-6", "section6");
+
+    </script>
+    </script>
+</body>
+
+</html>

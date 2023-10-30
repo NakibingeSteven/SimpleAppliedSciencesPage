@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            height: 100%;
+            width: 200px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidenav a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+        }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidenav .currentPage {
+            color: #f1f1f1;
+        }
+
+        .main {
+            margin-left: 200px;
+            /* Same as the width of the sidenav */
+            font-size: 18px;
+            /* Increased text to enable scrolling */
+            padding: 0px 10px;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+
+        ul ul {
+            margin-left: 20px;
+        }
+
+        ul ul ul {
+            margin-left: 40px;
+        }
+
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidenav">
+        <a href="index.html" class="currentPage">Introducution</a>
+        <a href="Electronics.html">Electronics</a>
+        <a href="Wireless.html">Wireless/IOT</a>
+        <a href="Mechanics.html">Mechanics</a>
+        <a href="Robotics.html">Robotics</a>
+        <a href="Form Factors.html">Form Factors</a>
+    </div>
+
+    <div class="main">
+        <h2 style="text-align: center;">INTRODUCTION TO THE SAN CAD CATALOGUE</h2>
+        <p>In writing this site, my mission is to empower R&D teams, robot enthusiasts, and mechanical
+            innovators with a dynamic and ever-evolving platform that streamlines your design process and connects
+            you to the most frequently used parts in robotics design or rather those i use alot</p>
+        <p>Forget the hassle of endless online searches or catalog flipping. With my simple catalogue I hope you'll find
+            the parts you need in a snap, so you can focus on what
+            you do best designing amazing things! 🚀</p>
+
+        <h2>Basic Rules</h2>
+        <p>The aim of this Product Design repository is to develop a user-friendly library of robotics or in general
+            mechanical systems assemblies,dcumentations and parts.
+            .To ease userability most of the submitted components should follow proper design guidelines and prioritize
+            simplicity,functionality and minimalism.
+        </p>
+        <p> The project considers mostly CNC manufacturing methods for designing parts and each of the methods follows
+            different
+            designing rules.The methods marjorly designed fr are :</p>
+        <p><b> 3D printing: </b>This is the most popular CNC manufacturing method for plastic parts and products of this
+            process are generally strong enough for hobbyist and research robotic projects.</p>
+        <p><b>Laser cutting: </b>Laser CNC cutting allows machining of wooden and metallic materials. Laser machining
+            allows
+            for quick and large-scale production.</p>
+        <p><b>CNC machining: </b>CNC machining is an alternative to laser cutting..</p><br>
+
+        <h2>File Sharing</h2>
+        <p>In sharing parts for interoperatability between different CAD softwars and machines ,it is recommended for
+            using
+            certain inter-sftwae file formats such as DXF,3MF,STEP instead f software dependent formats</p>
+        <p>The DXF format is particularly useful for compatibility with laser cutters and CNC machines. Importing the
+            DXF
+            file into a CAD environment also facilitates adjustments and modifications for 3D printing. Additionally,
+            including a 3MF or STL file with each part submission ensures easy printing.</p>
+        <p>Common FIle sharing files are</p>
+        <table>
+            <tr>
+                <th>File Sharing Format</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>DXF Format</td>
+                <td>Machining</td>
+            </tr>
+            <tr>
+                <td>STL Format</td>
+                <td>3d Prining</td>
+            </tr>
+        </table><br>
+
+        <h2>Design Instructions</h2>
+        <table>
+            <tr>
+                <th>File Sharing Aspect</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Thickness </td>
+                <td>There are no specific rules regarding chassis thickness, it is important to consider the shape and
+                    rigidity of the
+                    chassis. The thickness should be chosen appropriately to ensure the desired strength and stability.
+                </td>
+            </tr>
+            <tr>
+                <td>Material</td>
+                <td>All plates should be designed in a way that allows for the use of various manufacturing methods and
+                    materials. For special use case parts, it is recommended to mention the minimal thickness and the
+                    specific material required.</td>
+            </tr>
+            <tr>
+                <td>Fastener Hole diameter</td>
+                <td>All holes in the chassis should have a diameter depending on the fasteners thatare going to be used
+                </td>
+            </tr>
+        </table><br>
+
+        <h2>Chassis Designs/Shapes</h2>
+        <p>The foundation of many robots is the chassis and they are classified in many ways including </p>
+        <table>
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Rectangular</td>
+                <td>These plates can be rectangular, square, or trapezoidal in shape.</td>
+            </tr>
+            <tr>
+                <td> Circular </td>
+                <td>This category includes plates that are perfect circles.</td>
+            </tr>
+            <tr>
+                <td> Specialised</td>
+                <td>Plates in this category are designed for specific use cases or have specialized cutouts to
+                    accommodate
+                    specific requirements.</td>
+            </tr>
+        </table>
+
+        <h2>Component Holders</h2>
+        <p>All component holders are designed to fulfil a basic functionality,interfacing between chassis and other
+            parts
+            used in robotics projects.</p>
+        <p>Versatility is good but not strongly binding which means that holders should be designed to fit multiple
+            similar
+            parts. For example, a holder designed for an Arduino Uno should also be compatible with an Arduino Leonardo
+            and
+            similar boards. Similarly, a Nema23 motor holder could feature a hole pattern that accommodates Nema17
+            motors as
+            well.</p>
+        <p>The categories fr holers are summarised below</p>
+        <table>
+            <tr>
+                <th>Component Holders</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>Motors</td>
+                <td>Motor Holders for any type of motor used in a robot including servos,steppers,dc motors to mention
+                    but a
+                    few</td>
+            </tr>
+            <tr>
+                <td>Sensors and circuit boards</td>
+                <td>these holders are designed for any type of sensor,module,PCBs used in robotics projects.</td>
+            </tr>
+            <tr>
+                <td>Microcontrollers and SBCs</td>
+                <td> Intended for microcontrollers such as Arduino,STM boards and Single Board Computers (SBCs)
+                    Raspberry
+                    Pi, Jetson Nano, </td>
+            </tr>
+            <tr>
+                <td>Batteries</td>
+                <td> Including power banks, LiPo batteries, gel batteries any others.</td>
+            </tr>
+            <tr>
+                <td>Specialised or customised Holders/td>
+                <td>- Specialized holders for unpopular or custom parts that may solve specific problems the designer
+                    may have found</td>
+            </tr>
+        </table><br>
+
+        <h3>Breakdown basing on Knowledge Category:</h3>
+        <ul>
+            <li><a href="#electronics">Electronics</a>
+                <ul>
+                    <li><a href="#motors">Motors</a>
+                        <ul>
+                            <li><a href="#servos">Servos</a></li>
+                            <li><a href="#steppers">Steppers</a></li>
+                            <li><a href="#dcmotors">DC Motors</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ultrasonicsensors">Ultrasonic Sensors</a></li>
+                    <li><a href="#microcontrollers">Microcontrollers</a>
+                        <ul>
+                            <li><a href="#arduinonano">Arduino Nano and Uno</a></li>
+                            <li><a href="#stm">STM</a></li>
+                            <li><a href="#mirobot">Microbot</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#buttons">Buttons</a>
+                        <ul>
+                            <li><a href="#pushbuttons">Push Buttons</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#sensors">Sensors</a>
+                        <ul>
+                            <li><a href="#flex">Flex Sensors</a></li>
+                            <li><a href="#water">Water Sensors</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#buzzers">Buzzers</a></li>
+                </ul>
+            </li><br>
+            <li><a href="#robotics">Mechanical systems</a>
+                <ul>
+                    <li><a href="#motorbrackets">Motor Brackets</a></li>
+                    <li><a href="#wheels">Wheels</a></li>
+                    <li><a href="#pantiltmechanisms">Pan Tilt Mechanisms</a></li>
+                </ul>
+            </li><br>
+
+
+            <li><a href="#shape">Form Factors /Shapes</a>
+                <ul>
+                    <li><a href="#stacked">Stacked</a>
+                        <ul>
+                            <li><a href="#circular">Circular</a></li>
+                            <li><a href="#rectangular">Rectangular</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#supported">Supported</a>
+                        <ul>
+                            <li><a href="#circularsupported">Circular</a></li>
+                            <li><a href="#round">Round</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
